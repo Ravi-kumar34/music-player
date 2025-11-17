@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/run.dir/src/main.c.o CMakeFiles/run.dir/src/function.c.o -o run 
