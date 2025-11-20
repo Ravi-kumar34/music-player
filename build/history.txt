@@ -110,3 +110,35 @@ play the playlist
 see the song_list
 see the playlist
 play the playlist
+see the song_list
+see the playlist
+play the playlist
+See the list of album
+see the song_list
+see the song_list
+see the song_list
+see the song_list
+See the list of album
+see the song_list
+See the list of album
+See the list of album
+see the hiphop
+See the list of album
+see the love
+delete 13 from love
+See the list of album
+add Adorn to desh
+add Ordinary People to playlist
+See the list of album
+desh album add to playlist
+see the playlist
+play the playlist
+delete 3 from playlist
+See the list of album
+add love album to playlist
+see the love
+see the song_list
+See the list of album
+love album add to playlist
+see the playlist
+play the playlist
