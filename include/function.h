@@ -1,6 +1,7 @@
 #ifndef FUNCTION_H
 #define FUNCTION_H
 typedef struct node{
+    char ID[3];
     char sname[100];
     char singer[100];
     char time[10];

@@ -20,7 +20,7 @@ node* playlist(node *head,char name[]){
         return NULL;
     }
     while (fgets(line, sizeof(line), fp)) {
-        char arr[3][100];
+        char arr[4][100];
         line[strcspn(line, "\n")] = '\0';
         node*a=malloc(sizeof(node));
         char *token = strtok(line, ",");
@@ -29,9 +29,10 @@ node* playlist(node *head,char name[]){
             token;  // print each value
             token = strtok(NULL, ",");
         }
-        strcpy(a->sname,arr[0]);
-        strcpy(a->singer,arr[1]);
-        strcpy(a->time,arr[2]);
+        strcpy(a->ID,arr[0]);
+        strcpy(a->sname,arr[1]);
+        strcpy(a->singer,arr[2]);
+        strcpy(a->time,arr[3]);
         if (head == NULL) {
         head = a;  // Update head if list is empty
         x = head;
@@ -54,10 +55,10 @@ node* playlist(node *head,char name[]){
 //********************************************************** */
 void printlist(node* head){
     
-    printf("%-30s%-30s%-6s\n","SONG NAME","SINGER NAME","DURATION");
+    printf("%s %-30s%-30s%-6s\n","ID","SONG NAME","SINGER NAME","DURATION");
     node*y=head;
     while(y!=NULL){
-        printf("%-30s%-30s%-6s",y->sname,y->singer,y->time);
+        printf("%s %-30s%-30s%-6s",y->ID,y->sname,y->singer,y->time);
         printf("\n");
         y=y->next;
     }
@@ -78,6 +79,7 @@ void album(char name[],node *head){
         printf("Error opening file!\n");
         return;
     }
+    fprintf(ptr, "%s,", head->ID);
     fprintf(ptr, "%s,", head->sname);
     fprintf(ptr, "%s,", head->singer);
     fprintf(ptr, "%s\n", head->time);
@@ -100,8 +102,8 @@ void play(node* head,char filename[]){
     head->pre=y;
     y=y->next;
     while (strcmp(command,"close")!=0){
-        printf("%-30s%-30s%-6s\n","SONG NAME","SINGER NAME","DURATION");
-        printf("%-30s%-30s%-6s\n",y->sname,y->singer,y->time);
+        printf("%s %-30s%-30s%-6s\n","ID","SONG NAME","SINGER NAME","DURATION");
+        printf("%s %-30s%-30s%-6s",y->ID,y->sname,y->singer,y->time);
         printf("what you to do next :");
         scanf("%s",command);
         if(strcmp(command,"next")==0){
