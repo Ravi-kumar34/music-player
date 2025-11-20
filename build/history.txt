@@ -142,3 +142,11 @@ See the list of album
 love album add to playlist
 see the playlist
 play the playlist
+see the song_list
+see the playlist
+see the song_list
+see the playlist
+play the playlist
+See the list of album
+see the love
+see the song_list
